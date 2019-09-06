@@ -1,0 +1,22 @@
+
+<table>
+    <tr>
+        <th>Delete Student Quection</th>
+    </tr>
+    <tr>
+        <td>IDNO:</td>
+        <td>{{ object.num }}</td>
+    </tr>
+    <tr>
+        <td>Quection:</td>
+        <td>{{ object.quection }}</td>
+    </tr>
+
+    <tr>
+        <th>
+            <form method="post">
+                 {% csrf_token %}<button type="submit">Yes</button></form> </th>
+        <th><form action="/Tea1/" >
+            <button type="submit">No</button></form> </th>
+    </tr>
+</table>

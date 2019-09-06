@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<html>
+
+<p style="float: left ;"><img src="{% static "images/IMG_20190206_131643216.jpg" %}" width="180"></p>
+    <p style="float: right;"><img src="{% static "images/download (1).png" %}" width="" height="200"></p>
+<marquee><h1 style="color: white">Dr.K.k.r Gowtham school</h1></marquee>
+
+<table >
+    <tr>
+        <td>
+        <button type="submit"><h4 style="width: 316px"><a href="{% url "index1" %}">Home</a></h4></button>
+        </td>
+
+        <td>
+        <button type="submit"><h4 style="width: 316px"><a href="{% url "index3" %}">About</a></h4></button>
+        </td>
+        <td>
+        <button type="submit"><h4 style="width: 316px"><a href="{% url "index4" %}">Informactions</a></h4></button>
+        </td>
+         <form action="{% url "Tlogout" %}">
+            <td><button type="submit"><h4 style="width: 316px">Logout</h4></button></td>
+        </form>
+    </tr>
+</table>
+<br>
+<br>
+<br>
+<body bgcolor="#556b2f">
+<form action="{% url "Tlogin" %}" method="post">
+    {% csrf_token %}
+<table align="center" border="1">
+    <tr><td><h1 style="color: darkblue">Teacher Login Form</h1></td></tr>
+    <tr>
+        <td><input type="text" name="username" placeholder="Enter UserName" required></td>
+    </tr>
+    <tr>
+        <td><input type="password" name="password" placeholder="Enter password" required></td>
+    </tr>
+    <tr>
+        <td><button type="submit">TeacherLogin</button></td>
+    </tr>
+
+</table>
+    <table align="center">
+        <tr><td><input type="button" value="Go Back!" onclick="history.back()" ></td></tr>
+     </table>
+    </form>
+</body>
+{{ message }}
+</html>

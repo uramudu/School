@@ -1,0 +1,54 @@
+{% load staticfiles %}
+<html>
+<body bgcolor="#b8860b">
+{% load staticfiles %}
+<html>
+<body bgcolor="#ff4500">
+<p style="float: left ;"><img src="{% static "images/IMG_20190206_131643216.jpg" %}" width="180"></p>
+    <p style="float: right;"><img src="{% static "images/download (1).png" %}" width="" height="200"></p>
+<marquee><h1 style="color: white">Dr.K.k.r Gowtham school</h1></marquee>
+
+<table >
+    <tr>
+        <td>
+        <button type="submit"><h4 style="width: 316px"><a href="{% url "index1" %}">Home</a></h4></button>
+        </td>
+
+        <td>
+        <button type="submit"><h4 style="width: 316px"><a href="{% url "index3" %}">About</a></h4></button>
+        </td>
+        <td>
+        <button type="submit"><h4 style="width: 316px"><a href="{% url "index4" %}">Informactions</a></h4></button>
+        </td>
+        <td>
+
+            <form action="{% url "Tlogout" %}">
+            <td><button type="submit"><h4 style="width: 316px">Logout</h4></button></td>
+        </form>
+
+    </tr>
+</table>
+ <fieldset style="padding: 3px;width:100%;" align="center"  >
+        <legend ><font color="red" Face='verdana' size='2'><h1>Teacher</h1></font></legend>
+ </fieldset>
+ <br>
+<form>
+    <table>
+        <tr>
+            <td>
+                <a href="{% url "show" %}"><h1>1.Total Student Register</h1></a>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="{% url "Radha" %}"><h1>2.Send The Answer</h1></a></td>
+        </tr>
+        <tr>
+            <td><a href="{% url "viewall" %}"><h1>3.Student Quection</h1></a></td>
+        </tr>
+    </table>
+    <table align="center">
+        <tr><td><input type="button" value="Go Back!" onclick="history.back()" ></td></tr>
+    </table>
+</form>
+</body>
+</html>

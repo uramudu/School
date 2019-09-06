@@ -1,0 +1,39 @@
+<html>
+<body  bgcolor="aqua">
+<form>
+<table border="1">
+    <tr>
+        <td>Idno</td>
+        <td>Name</td>
+        <td>Sure Name</td>
+        <td>Father</td>
+        <td>Mother</td>
+        <td>Date Of Birth Day</td>
+        <td>Gender</td>
+        <td>Phone</td>
+        <td>User Name</td>
+        <td>Password</td>
+        <td>Imges</td>
+    </tr>
+
+    {% for i in data %}
+    <tr>
+        <td>{{ i.idno }}</td>
+        <td>{{ i.name }}</td>
+        <td>{{ i.surname }}</td>
+        <td>{{ i.father }}</td>
+        <td>{{ i.mother }}</td>
+        <td>{{ i.date }}</td>
+        <td>{{ i.gen }}</td>
+        <td>{{ i.phone }}</td>
+        <td>{{ i.username }}</td>
+        <td>{{ i.password }}</td>
+        <td><img src="{{ i.image.url }}" width="100"></td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{% url "show" %}">Profile Date</a>
+
+</form>
+</body>
+</html>
